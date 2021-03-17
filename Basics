@@ -7,6 +7,26 @@ string c = "hello";
 
 MessageBox.Show(a + b + " " + c);
 //output -> 4 hello
-//C# operates calculation if the integers are not in string form.
+//C# operates calculation if the integers are not in string form or there is no space or other formatting between (as in my knowledge).
 
+//this shows one valid way to get each of the numbers without adding them together +""+ as in invisible space between or whatever string you like.
+//MessageBox.Show(a +""+ b + " " + c);
+
+//now for simple foreach loop the loop trough the string c "hello"
+//foreach ((what and name) from (target) example, array or in this case string, string consist chars, so we can loop through them
+//so foreach "hello" characters in the string, which are "h, e, l, l, o" we loop through
+//this shows error however because of the miscast type, messagebox.show can only show strings NOT chars
+
+foreach(char d in c)
+{
+   MessageBox.Show(d);
+}
+
+//to fix this we simple need to cast d into string, with .ToString() function 
+//and it works!
+
+foreach(char d in c)
+{
+   MessageBox.Show(d.ToString());
+}
 
