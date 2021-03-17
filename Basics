@@ -1,4 +1,12 @@
-//C# basics by Mikko - feel free to copypaste this into console.app or forms.app - works either way :)!
+//C# basics by Mikko 
 
+int a = 1
+int b = 3
+
+string c = "hello";
+
+MessageBox.Show(a + b + " " + c);
+//output -> 4 hello
+//C# operates calculation if the integers are not in string form.
 
 
