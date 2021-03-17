@@ -7,7 +7,7 @@ string c = "hello";
 
 MessageBox.Show(a + b + " " + c);
 //output -> 4 hello
-//C# operates calculation if the integers are not in string form or there is no space or other formatting between (as in my knowledge).
+//C# operates calculation if the integers are not in string or char form or there is no space or other formatting between (as in my knowledge).
 
 //this shows one valid way to get each of the numbers without adding them together +""+ as in invisible space between or whatever string you like.
 //MessageBox.Show(a +""+ b + " " + c);
