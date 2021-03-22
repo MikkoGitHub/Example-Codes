@@ -1,0 +1,54 @@
+//Loops are essential for doing versitile coding in my opinion, here are the basic loops of C#
+//Basic loops that we're going go trough here are WHILE-loop, DO WHILE-loop, FOR-loop, FOREACH-loop.
+
+//WHILE-loop - this is tricky for beginners, you have to determine rules for the loop otherwise infinite loops are easy to create...
+//example, this loop is infinite because int a will be always equal to 1.
+
+int a = 1;
+
+while(a == 1)
+{
+ Console.WriteLine("Hello!");
+};
+
+//to fix this problem we can add logic to the loop, like incrementing or decrementing or breaking the loop wtih break; function.
+//like this...
+
+while(a == 1)
+{
+  Console.WriteLine("Hello!");
+  a++;
+}
+
+//the other variant of WHILE loop is DO WHILE loop, difference between them is that DO WHILE executes atleast once.
+
+do
+{
+ a++;
+}(while a > 0);
+
+//FOR-loop, we determine conditions to the loop like this
+//after the keyword 'for' we set up our loopcounter with integer 'a' and set it to 0. After we determined the integer we use ; to move to the next part of the loop logic which is
+//"loop while" condition, so in this case loop while 'a' is less than 5. Lastly we have to define what hapens when loop is ran? we increment our int 'a' with command a++;
+
+for(int a = 0; a < 5; a++)
+{
+   Console.WriteLine(a);
+}
+
+
+//Lastly but not least, we have FOREACH loop which is really handy for lists and arrays, and other unfolding events that you might need to deal with, as you might have some
+//list which lenght is X, and u dont really even want to know the real length because it may vary depending on the situation.
+//for this example lets make array of numbers!
+
+int[] numArray = new int[]{
+1, 2, 3, 4, 5
+};
+
+//now for the loop we have to define WHAT (integer) in WHERE (array). So this means we want to loop every integer in our array called numArray.
+
+foreach(int a in numArray)
+{
+  Console.WriteLine(a);
+}
+
