@@ -52,6 +52,8 @@ namespace ObjectReferences
 
         private void ButtonCheck(object sender)
         {
+        //Tag is default string, so we have to typecast it into Int in order to compare the object tag to int
+        
             Button TempButton = (Button)sender;
             if(Convert.ToInt32(TempButton.Tag) == 1)
             {
