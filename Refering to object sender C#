@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ObjectReferences
 {
-
+//in the forms i created 4 buttons, and gave each button tag from 1 to 4.
 //this is basic example of grouping events and using sender as object reference
-//here we get (button)sender in temp holder, extract the tag/name and use it as reference for the object
+//here we get (button)sender in temp holder, extract the tag and use it as reference for the object
 
 
     public partial class Form1 : Form
