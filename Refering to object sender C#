@@ -34,9 +34,6 @@ namespace ObjectReferences
         {
             Button tempButton = (Button)sender;
 
-            listBox1.Items.Add(tempButton.Text);
-            comboBox1.Items.Add(tempButton.Text);
-
             ButtonCheck(sender);
 
             //you can make this much cleaner with arrays, but as said in the earlier comment i wanted to keep this one raw
@@ -45,11 +42,6 @@ namespace ObjectReferences
                 MessageBox.Show("They all returned true!");
 
                 Butt1 = false; Butt2 = false; Butt3 = false; Butt4 = false;
-            }
-
-            if(comboBox1.Items.Count > 0 && comboBox1.SelectedIndex == -1)
-            {
-                comboBox1.SelectedIndex = 0;
             }
         }
 
