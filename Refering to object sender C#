@@ -18,6 +18,8 @@ namespace ObjectReferences
     public partial class Form1 : Form
     {
 
+//to make life simple, just create bool array for the "switches", in this example i wanted to keep it raw.
+
     bool Butt1 = false;
     bool Butt2 = false;
     bool Butt3 = false;
@@ -37,6 +39,7 @@ namespace ObjectReferences
 
             ButtonCheck(sender);
 
+            //you can make this much cleaner with arrays, but as said in the earlier comment i wanted to keep this one raw
             if(Butt1 == true && Butt2 == true && Butt3 == true && Butt4 == true)
             {
                 MessageBox.Show("They all returned true!");
