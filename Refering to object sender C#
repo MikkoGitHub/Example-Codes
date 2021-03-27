@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ObjectReferences
+{
+
+//this is basic example of grouping events and using sender as object reference
+//here we get (button)sender in temp holder, extract the tag/name and use it as reference for the object
+
+
+    public partial class Form1 : Form
+    {
+
+    bool Butt1 = false;
+    bool Butt2 = false;
+    bool Butt3 = false;
+    bool Butt4 = false;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void ButtonPressEvent(object sender, EventArgs e)
+        {
+            Button tempButton = (Button)sender;
+
+            listBox1.Items.Add(tempButton.Text);
+            comboBox1.Items.Add(tempButton.Text);
+
+            ButtonCheck(sender);
+
+            if(Butt1 == true && Butt2 == true && Butt3 == true && Butt4 == true)
+            {
+                MessageBox.Show("They all returned true!");
+
+                Butt1 = false; Butt2 = false; Butt3 = false; Butt4 = false;
+            }
+
+            if(comboBox1.Items.Count > 0 && comboBox1.SelectedIndex == -1)
+            {
+                comboBox1.SelectedIndex = 0;
+            }
+        }
+
+        private void ButtonCheck(object sender)
+        {
+            Button TempButton = (Button)sender;
+            if(Convert.ToInt32(TempButton.Tag) == 1)
+            {
+                Butt1 = true;
+            }
+
+            if (Convert.ToInt32(TempButton.Tag) == 2)
+            {
+                Butt2 = true;
+            }
+
+            if (Convert.ToInt32(TempButton.Tag) == 3)
+            {
+                Butt3 = true;
+            }
+
+            if (Convert.ToInt32(TempButton.Tag) == 4)
+            {
+                Butt4 = true;
+            }
+        }
+    }
+}
