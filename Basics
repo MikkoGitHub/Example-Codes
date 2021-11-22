@@ -15,7 +15,7 @@ MessageBox.Show(a + b + " " + c);
 //now for simple foreach loop the loop trough the string c "hello"
 //foreach ((what and name) from (target) example, array or in this case string, string consist chars, so we can loop through them
 //so foreach "hello" characters in the string, which are "h, e, l, l, o" we loop through
-//this shows error however because of the miscast type, messagebox.show can only show strings NOT chars
+//if messagebox.show automaticly tries to output strings if possible, otherwise you need to add .ToString() at the end. Messagebox.show can only show strings.
 
 foreach(char d in c)
 {
