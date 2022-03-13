@@ -1,9 +1,7 @@
      //You call this method with RandomNames, it returns string output
     
      Random Names = new Random();
-     
      String GetName = RandomNames();
-     
      private string RandomNames()
         {
         
